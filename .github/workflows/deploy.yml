@@ -33,6 +33,7 @@ jobs:
 
      - name: 🛠️ Build the app
        run: |
+         npm ci
          VITE_API_URL=https://my-app-backend-cicd-2.onrender.com npm run build
 
 
