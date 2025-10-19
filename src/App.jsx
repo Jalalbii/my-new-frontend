@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div style={{ padding: '2rem', fontFamily: 'Arial' }}>
-      <h1>Item List</h1>
+      <h1 style={{border: "5px solid pink"}}>Item List</h1>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <ul>
         {items?.map((item, idx) => (
