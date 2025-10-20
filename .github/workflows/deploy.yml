@@ -4,7 +4,7 @@ name: Deploy React App to GitHub Pages
 on:
  push:
    branches:
-     - feature  // when you push code to this branch your deployment happens
+     - feature  
 
 
 permissions:
@@ -33,11 +33,12 @@ jobs:
 
      - name: 🛠️ Build the app
        run: |
+         npm ci
          VITE_API_URL=https://my-app-backend-cicd-2.onrender.com npm run build
 
 
      - name: 🚀 Deploy to GitHub Pages
        uses: peaceiris/actions-gh-pages@v4
        with:
-         github_token: ${{ secrets.GITHUB_TOKEN }} // this will be automatically taken by github
+         github_token: ${{ secrets.GITHUB_TOKEN }} 
          publish_dir: ./dist
